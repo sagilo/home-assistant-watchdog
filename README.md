@@ -22,7 +22,12 @@ Give it a name (something like Watchdog), copy the token and keep it safe (it wo
 ![ha_token](https://i.imgur.com/TGDtgOw.png)
 
 ## Google Apps script project
-### Setup code
+### Get code
+Select one of the two methods below
+#### 1. Make a copy of my project
+You can get the code by one of two options, go to [my project](http://bit.ly/2EDWb1b) and use the 'file > make a copy'  
+
+#### 2. Create Google Apps Script project and copy the files
 Go to your [drive](https://drive.google.com) and click on new > more > Google Apps Script  
 You can click on the 'Untitled Project' to give it a name (i.e. HomeAssistant watchdog)  
 Use the 'new > script file' under 'file' menu to create new files and use the little arrow next to the files name to rename.
@@ -31,11 +36,10 @@ Copy the files content from the repository to the Google Script Project
 
 ![files_tree](https://i.imgur.com/tzYlH9R.png)
 
+### Configure
 Go to the `Configuration.gs` file you've just created, and set the necessary variables.
 
-Now the script is pretty much ready to run.  
-
-#### Test it
+### Test it
 Select the `Main.gs` file and make sure the selected function on the toolbar states 'main'.  
 Now click the Play (arrow) button, a few dialogs will be shown, asking for the relevant permissions (execution and sending emails).  
 
