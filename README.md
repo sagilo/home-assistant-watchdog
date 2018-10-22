@@ -48,6 +48,9 @@ You can change the `HA_URL` on `Configuration.gs` to an invalid URL to make sure
 ### Schedule
 Here is the magic, Google Apps Script enables schedule runs. This way, our code is executed by a stable Google cloud server.  
 Click the clock icon (next to the Play button) and click on 'Click here to add one now.' link.  
+
+![shcedule_icon](https://i.imgur.com/jDeFnBV.png)
+
 Click the new link again, a new trigger should've beed created.  
 The default trigger is hour timer, but I personally prefer minute timer, on the last box set the minutes interval (I use 5 minutes)  
 
