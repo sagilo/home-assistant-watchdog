@@ -27,6 +27,10 @@ if (HA_URL == "") {
     throw ("Missing HA_URL");
 }
 
+if (HA_URL.endsWith("/")) {
+    throw ("HA URL shouldn't end with a slash:  "+HA_URL);
+}
+
 if (HA_TOKEN == "") {
     throw ("Missing HA_TOKEN");
 }
