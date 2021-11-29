@@ -70,6 +70,7 @@ function isHaRunning() {
   
   var headers = {
     'Authorization': "Bearer "+HA_TOKEN,
+    'Content-Type' : "application/json",
   };
     
   var options =
