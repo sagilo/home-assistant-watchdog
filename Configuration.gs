@@ -8,6 +8,8 @@ var NUM_ERROR_BEFORE_RE_NOTIFYING = 10;
 var HA_URL = "";
 // HA Long lived token
 var HA_TOKEN = "";
+var EXPECTED_API_RESPONSE = "API running.";
+
 // notification email, tip: use (+) trick 
 // for easy filtering, for example:
 // yourname+hawatchdog@gmail.com

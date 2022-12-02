@@ -1,9 +1,9 @@
 function main() {
-  var isRunning = isHaRunning();
-  if (isRunning) {
+  try {
+    checkIfHaRunning();
     haRunning();
-  } else {
-    haNotRunning();
+  } catch (e) {
+    haNotRunning(e);
   }
   
   Logger.log("Finished execution");

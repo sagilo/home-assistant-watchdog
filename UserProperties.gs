@@ -4,10 +4,6 @@ var lastSuccessfulCallKey = 'lastSuccessfulCall';
 var lastFailedCallKey = 'lastFailedfulCall';
 var numFailuresKey = 'numFailures';
 
-//resetLastSuccessful();
-//resetLastFailed();
-//resetNumFailures();
-
 function getLastSuccessful() {
   var timestamp = properties.getProperty(lastSuccessfulCallKey);
   if (timestamp == null) {
@@ -19,10 +15,14 @@ function getLastSuccessful() {
 }
 
 function setLastSuccessful(time) {
+  var date = new Date();
+  date.setTime(time);
+  Logger.log("Setting last successful to time: "+date)
   properties.setProperty(lastSuccessfulCallKey, time);
 }
 
 function resetLastSuccessful() {
+  Logger.log("Resseting '"+lastSuccessfulCallKey+"' property")
   properties.deleteProperty(lastSuccessfulCallKey);
 }
 
@@ -36,11 +36,15 @@ function getLastFailed() {
   return date;
 }
 
-function setLastFailed(time) {
-  properties.setProperty(lastFailedCallKey, time);
+function setLastFailed(timestamp) {
+  var date = new Date();
+  date.setTime(timestamp);
+  Logger.log("Setting last failed to: "+date);
+  properties.setProperty(lastFailedCallKey, timestamp);
 }
 
 function resetLastFailed() {
+  Logger.log("Resetting '"+lastFailedCallKey+"' property")
   properties.deleteProperty(lastFailedCallKey);
 }
 
@@ -61,6 +65,7 @@ function incNumFailures() {
 }
 
 function resetNumFailures() {
+  Logger.log("Resetting '"+numFailuresKey+"' property")
   properties.deleteProperty(numFailuresKey);
 }
 
